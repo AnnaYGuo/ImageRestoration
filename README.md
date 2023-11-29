@@ -7,10 +7,11 @@ Image sizes:
 4. Arleen Lawson        1220x1746       600dpi          32bit
 
 Potential Models:
-1. ILO (https://github.com/giannisdaras/ilo) (Anna)
-2. PLSD (Isshan)
-3. SuperSR
-4. HuggingFace
+1. ILO (https://github.com/giannisdaras/ilo) (Anna, Luke)
+2. PLSD (Arnold)
+3. SuperSR (Isshan)
+4. Microsoft (Raymond)
+4. HuggingFace (Brandon)
 
 Evaluation:
 1. Manual Check
