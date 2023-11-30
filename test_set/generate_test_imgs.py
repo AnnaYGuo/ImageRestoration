@@ -48,11 +48,11 @@ def main(input_dir, output_dir):
 
                 # Create output directory for the current input image
                 input_name = Path(img_path).stem
-                output_subdir = os.path.join(output_dir, input_name)
-                os.makedirs(output_subdir, exist_ok=True)
+                # output_subdir = os.path.join(output_dir, input_name)
+                # os.makedirs(output_subdir, exist_ok=True)
 
                 # Apply transformations and save output images
-                apply_transformations(img, output_subdir, input_name)
+                apply_transformations(img, output_dir, input_name)
 
 if __name__ == "__main__":
     input_directory = "./img_in"
