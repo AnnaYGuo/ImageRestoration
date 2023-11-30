@@ -13,10 +13,11 @@ Image sizes:
 
 Models/Tools
 * fotor.com
-* ILO
+* ILO (cuda required)
 * Microsoft
-* SuperSR
+* SuperSR (cuda required)
 * PSLD
+* ancestry
 * hotpot.ai
 Additional Considerations
 * Conversions to jpeg inputs may work better than png on some models
@@ -38,3 +39,7 @@ Evaluation:
 3. Peak Signal-to-Noise Ratio (PSNR)
 4. Visual Information Fidelity (VIF)
 5. Crowd Sourcing/Polling
+
+
+MPRNet
+from PIL import __version__ as PILLOW_VERSION in /home/ayg479/opt/anaconda3/envs/pytorch1/lib/python3.7/site-packages/torchvision/transforms/functional.py
