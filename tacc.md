@@ -29,3 +29,5 @@
 * `module load {desired_module}` 
 * `idev -m {minutes_timeout} -p {rtx-dev}`
     * `rtx-dev` specifies a GPU node rather than a regular node
+
+    `usr/local/etc/taccinfo`
