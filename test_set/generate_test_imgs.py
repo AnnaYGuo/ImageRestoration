@@ -36,7 +36,10 @@ def apply_transformations(image, output_dir, prefix):
 
     # Crop the image to the square
     image = image[top:bottom, left:right]
-    
+    img_dir = output_dir + f"/{prefix}"
+    os.mkdir(img_dir)
+    # breakpoint()
+
     # Gaussian Blur
     for blur_size in [0, 11, 21]:
         if (blur_size != 0): blurred = cv2.GaussianBlur(image, (blur_size, blur_size), 0) 
@@ -47,7 +50,7 @@ def apply_transformations(image, output_dir, prefix):
             # Downscaling
             for scale in [0, 0.25, 0.5]:
                 downscaled = cv2.resize(noisy, (int(noisy.shape[1] * (1 - scale)), int(noisy.shape[0] * (1 - scale))))
-                cv2.imwrite(os.path.join(output_dir, f"{prefix}_blur_{blur_size}_noise_{var}_downscale_{int(scale * 100)}.jpg"), downscaled)
+                cv2.imwrite(os.path.join(img_dir, f"{prefix}_blur_{blur_size}_noise_{var}_downscale_{int(scale * 100)}.jpg"), downscaled)
 
 def main(input_dir, output_dir):
     min_height, min_width = normalize_sizes(input_dir)
