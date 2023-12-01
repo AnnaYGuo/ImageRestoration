@@ -19,6 +19,24 @@ def normalize_sizes(input_dir):
     return min_height, min_width
 
 def apply_transformations(image, output_dir, prefix):
+     # Get the original width of the image
+    original_width = image.shape[1]
+
+    # Calculate the center of the image
+    center_x, center_y = original_width // 2, image.shape[0] // 2
+
+    # Calculate the size of the square (use the smaller dimension)
+    size = min(original_width, image.shape[0])
+
+    # Calculate the coordinates for cropping
+    left = center_x - size // 2
+    top = center_y - size // 2
+    right = center_x + size // 2
+    bottom = center_y + size // 2
+
+    # Crop the image to the square
+    image = image[top:bottom, left:right]
+    
     # Gaussian Blur
     for blur_size in [0, 11, 21]:
         if (blur_size != 0): blurred = cv2.GaussianBlur(image, (blur_size, blur_size), 0) 
