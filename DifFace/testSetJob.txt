@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#SBATCH -p rtx-dev
+#SBATCH -o myjob.o%j
+#SBATCH -e myjob.e%j
+#SBATCH -J stablesr
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 01:30:00
+
+cd $SCRATCH/DifFace
+conda activate DifFace
+python inference_difface.py --in_path $SCRATCH/ImageRestoration/test_set/img_preprocessed/perry --out_path $SCRATCH/ImageRestoration/DifFace/results/perry --gpu_id 1
+python inference_difface.py --in_path $SCRATCH/ImageRestoration/test_set/img_preprocessed/dudley --out_path $SCRATCH/ImageRestoration/DifFace/results/dudley --gpu_id 1
+python inference_difface.py --in_path $SCRATCH/ImageRestoration/test_set/img_preprocessed/lawson --out_path $SCRATCH/ImageRestoration/DifFace/results/lawson --gpu_id 1
+python inference_difface.py --in_path $SCRATCH/ImageRestoration/test_set/img_preprocessed/brewer --out_path $SCRATCH/ImageRestoration/DifFace/results/brewer --gpu_id 1
