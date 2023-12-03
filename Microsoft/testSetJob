@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#SBATCH -p rtx-dev
+#SBATCH -o myjob.o%j
+#SBATCH -e myjob.e%j
+#SBATCH -J difface
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 01:30:00
+
+cd $SCRATCH/Bringing-Old-Photos-Back-to-Life
+conda init
+source ~/.bashrc
+conda activate microshaft
+python run.py --input_folder $SCRATCH/ImageRestoration/test_set/img_preprocessed/perry \
+              --output_folder $SCRATCH/ImageRestoration/Microsoft/results/perry \
+              --GPU 1
+python run.py --input_folder $SCRATCH/ImageRestoration/test_set/img_preprocessed/dudley \
+              --output_folder $SCRATCH/ImageRestoration/Microsoft/results/dudley \
+              --GPU 1
+python run.py --input_folder $SCRATCH/ImageRestoration/test_set/img_preprocessed/brewer \
+              --output_folder $SCRATCH/ImageRestoration/Microsoft/results/brewer \
+              --GPU 1
+python run.py --input_folder $SCRATCH/ImageRestoration/test_set/img_preprocessed/lawson \
+              --output_folder $SCRATCH/ImageRestoration/Microsoft/results/lawson \
+              --GPU 1
