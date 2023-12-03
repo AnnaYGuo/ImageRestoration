@@ -3,7 +3,7 @@
 #SBATCH -p rtx-dev
 #SBATCH -o myjob.o%j
 #SBATCH -e myjob.e%j
-#SBATCH -J difface
+#SBATCH -J microshaft
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -t 01:30:00
@@ -14,4 +14,6 @@ source ~/.bashrc
 conda activate microshaft
 python run.py --input_folder $SCRATCH/ImageRestoration/test_set/img_in \
               --output_folder $SCRATCH/ImageRestoration/Microsoft/results/noBlur \
-              --GPU 1
+              --GPU 1 \
+	      --with_scratch \
+	      --HR
