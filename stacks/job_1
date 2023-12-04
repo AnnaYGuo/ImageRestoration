@@ -34,7 +34,9 @@ python inference_gfpgan.py -i $BASE/test_set/img_preprocessed${FN} -o $BASE/GFPG
 
 cd $BASE/HAT/HAT
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
-conda activate gfpgan
+conda activate hat
 python hat/test.py -opt ../HAT-S_SRx4.yml --force-yaml test_1:dataroot_lq=$BASE/GFPGAN/results${FN} name=${FN}
 
+source $SCRATCH/miniconda3/etc/profile.d/conda.sh
+conda activate base
 cp -r $BASE/HAT/HAT/results/${FN}/visualization/Set5 $BASE/final_results${FN}
