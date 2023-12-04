@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-#git submodule update --init --recursive
+git submodule update --init --recursive
 conda update conda
 
 echo "Installing GFPGAN"
