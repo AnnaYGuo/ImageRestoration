@@ -74,6 +74,7 @@ def apply_transformations(image, output_dir, prefix):
             if(crop=='inside_square'):
                 noisy = noisy[small_top:small_bottom, small_left:small_right]
             elif(crop=='outside_square'):
+                # breakpoint()
                 noisy = np.pad(noisy, ((pad_top, pad_bottom), (pad_left, pad_right), (0, 0)), mode='constant', constant_values=0)
             if(crop=='inside_square' or crop=='outside_square'):
                 if(resolution != False):
