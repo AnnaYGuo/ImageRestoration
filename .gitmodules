@@ -1,0 +1,6 @@
+[submodule "StableSR/StableSR"]
+	path = StableSR/StableSR
+	url = git@github.com:IceClear/StableSR.git
+[submodule "Microsoft/Bringing-Old-Photos-Back-to-Life"]
+	path = Microsoft/Bringing-Old-Photos-Back-to-Life
+	url = git@github.com:microsoft/Bringing-Old-Photos-Back-to-Life.git

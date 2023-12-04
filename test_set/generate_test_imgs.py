@@ -61,8 +61,6 @@ def main(input_dir, output_dir):
     parser.add_argument('--downscale', action='store_true', help='Downscale image')
     parser.add_argument('--crop', action='store_true', help='Crop image')
     
-    
-    
     min_height, min_width = normalize_sizes(input_dir)
 
     for root, _, files in os.walk(input_dir):
