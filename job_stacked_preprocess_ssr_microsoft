@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -p rtx-dev
+#SBATCH -p rtx
 #SBATCH -o myjob.o%j
 #SBATCH -e myjob.e%j
 #SBATCH -J stablesr
