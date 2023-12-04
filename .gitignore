@@ -1,5 +1,7 @@
-test_set/img_preprocessed
+test_set/img_preprocessed*
 ILO/brewer
-*/results
+*/results*
 */ckpt
 *.ckpt
+myjob.e*
+myjob.o*
