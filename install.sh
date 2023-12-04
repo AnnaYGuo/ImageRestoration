@@ -20,8 +20,8 @@ python -m pip install -e .
 
 cd ..
 mkdir $SCRATCH/ckpt/
-if test -f $SCRATCH/ckpt/stablesr_000117.ckpt; then wget https://huggingface.co/Iceclear/StableSR/resolve/main/stablesr_000117.ckpt -P $SCRATCH/ckpt; fi
-if test -f $SCRATCH/ckpt/vqgan_cfw_00011.ckpt; then wget https://huggingface.co/Iceclear/StableSR/resolve/main/vqgan_cfw_00011.ckpt -P $SCRATCH/ckpt; fi
+if ! test -f $SCRATCH/ckpt/stablesr_000117.ckpt; then wget https://huggingface.co/Iceclear/StableSR/resolve/main/stablesr_000117.ckpt -P $SCRATCH/ckpt; fi
+if ! test -f $SCRATCH/ckpt/vqgan_cfw_00011.ckpt; then wget https://huggingface.co/Iceclear/StableSR/resolve/main/vqgan_cfw_00011.ckpt -P $SCRATCH/ckpt; fi
 
 cd ..
 
@@ -65,3 +65,8 @@ cd ../
 python -m pip install -r requirements.txt
 
 cd ../../
+
+source $SCRATCH/miniconda3/etc/profile.d/conda.sh
+conda activate base
+conda install pip
+pip install opencv-python imageio
