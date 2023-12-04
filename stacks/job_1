@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #SBATCH -p rtx
-#SBATCH -o myjob.o%j
-#SBATCH -e myjob.e%j
+#SBATCH -o job_1.o%j
+#SBATCH -e job_1.e%j
 #SBATCH -J job_1
 #SBATCH -N 1
 #SBATCH -n 1
@@ -39,4 +39,4 @@ python hat/test.py -opt $BASE/HAT/HAT-S_SRx4.yml --force_yml datasets:test_1:dat
 
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
-cp -r $BASE/HAT/HAT/results/${FN}/visualization/Set5 $BASE/final_results${FN}
+cp -r $BASE/HAT/HAT/results/${FN}/visualization/Set5 $BASE/final_results/final_results${FN}
