@@ -1,10 +1,8 @@
 #!/bin/bash
 
 set -e
-git submodule update --init --recursive
+#git submodule update --init --recursive
 conda update conda
-
-cd Bringing-Old-Photos-Back-to-Life
 
 echo "Installing GFPGAN"
 

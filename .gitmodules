@@ -7,6 +7,6 @@
 [submodule "GFPGAN/GFPGAN"]
 	path = GFPGAN/GFPGAN
 	url = git@github.com:TencentARC/GFPGAN.git
-[submodule "HATPARENT/HAT"]
-	path = HATPARENT/HATT
+[submodule "HAT/HAT"]
+	path = HAT/HAT
 	url = git@github.com:XPixelGroup/HAT.git
