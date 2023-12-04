@@ -38,7 +38,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: ./HAT-S_SRx4.pth
+  pretrain_network_g: ${WORK}/ImageRestoration/HAT/HAT-S_SRx4.pth
   strict_load_g: true
   param_key_g: 'params_ema'
 
