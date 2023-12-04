@@ -58,6 +58,7 @@ def apply_transformations(image, output_dir, prefix):
     #black and white
     if(black_white):
         image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
 
     # Gaussian Blur
     
