@@ -25,7 +25,7 @@ source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
 python test_set/generate_test_imgs.py -r 512 -bw -i Microsoft/results${FN}/final_output -o test_set/img_preprocessed${FN} -n 0 20 -b 0 20
 
-cd $WORK/SuperSR/StableSR
+cd $WORK/ImageRestoration/SuperSR/StableSR
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate stablesr
 python scripts/sr_val_ddpm_text_T_vqganfin_old.py --config configs/stableSRNew/v2-finetune_text_T_512.yaml --ckpt $SCRATCH/ckpt/stablesr_000117.ckpt --vqgan_ckpt $SCRATCH/ckpt/vqgan_cfw_00011.ckpt \
