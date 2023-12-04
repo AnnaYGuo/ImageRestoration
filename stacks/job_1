@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#SBATCH -p rtx
+#SBATCH -o myjob.o%j
+#SBATCH -e myjob.e%j
+#SBATCH -J job_1
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 01:30:00
+
+# Microsoft, Preprocess, GFPGAN, HAT
+FN="_job_1"
+BASE="${WORK}/ImageRestoration"
+
+cd $BASE/Microsoft/Bringing-Old-Photos-Back-to-Life
+source $SCRATCH/miniconda3/etc/profile.d/conda.sh
+conda activate microsoft
+python run.py \
+--input_folder $BASE/test_set/img_in \
+--output_folder $BASE/Microsoft/results${FN} \
+--GPU 1 \
+--with_scratch \
+--HR
+
+cd $BASE
+source $SCRATCH/miniconda3/etc/profile.d/conda.sh
+conda activate base
+python $BASE/test_set/generate_test_imgs.py -r 512 -bw -i $BASE/Microsoft/results${FN}/final_output -o $BASE/test_set/img_preprocessed${FN} -n 0 10 20 -b 0 10 20
+
+cd $BASE/GFPGAN/GFPGAN
+source $SCRATCH/miniconda3/etc/profile.d/conda.sh
+conda activate gfpgan
+python inference_gfpgan.py -i $BASE/test_set/img_preprocessed${FN} -o $BASE/GFPGAN/results${FN} -v 1.3 -s 2
+
+cd $BASE/HAT/HAT
+source $SCRATCH/miniconda3/etc/profile.d/conda.sh
+conda activate gfpgan
+python hat/test.py -opt ../HAT-S_SRx4.yml --force-yaml test_1:dataroot_lq=$BASE/GFPGAN/results${FN} name=${FN}
+
+cp -r $BASE/HAT/HAT/results/${FN}/visualization/Set5 $BASE/final_results${FN}
