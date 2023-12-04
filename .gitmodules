@@ -4,3 +4,6 @@
 [submodule "Microsoft/Bringing-Old-Photos-Back-to-Life"]
 	path = Microsoft/Bringing-Old-Photos-Back-to-Life
 	url = git@github.com:microsoft/Bringing-Old-Photos-Back-to-Life.git
+[submodule "Final2x"]
+	path = Final2x
+	url = git@github.com:Tohrusky/Final2x.git
