@@ -8,22 +8,12 @@
 #SBATCH -n 1
 #SBATCH -t 01:30:00
 
-FN="_mps"
-
-cd $WORK/ImageRestoration/Microsoft/Bringing-Old-Photos-Back-to-Life
-source $SCRATCH/miniconda3/etc/profile.d/conda.sh
-conda activate microsoft
-python run.py \
---input_folder ../../test_set/img_in \
---output_folder ../results${FN} \
---GPU 1 \
---with_scratch \
---HR
+FN="_psm"
 
 cd $WORK/ImageRestoration
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
-python test_set/generate_test_imgs.py -r 512 -bw -i Microsoft/results${FN}/final_output -o test_set/img_preprocessed${FN} -n 0 20 -b 0 20
+python test_set/generate_test_imgs.py -r 512 -bw -i test_set/img_in -o test_set/img_preprocessed${FN} -n 0 20 -b 0 20 -d 0.5 0.75
 
 cd $WORK/ImageRestoration/SuperSR/StableSR
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
@@ -32,4 +22,14 @@ python scripts/sr_val_ddpm_text_T_vqganfin_old.py --config configs/stableSRNew/v
 --init-img $WORK/ImageRestoration/test_set/img_preprocessed${FN}/ \
 --outdir $WORK/ImageRestoration/SuperSR/results${FN}/ --ddpm_steps 200 --dec_w 0.5 --colorfix_type adain
 
-cp $WORK/ImageRestoration/SuperSR/results${FN}/ $WORK/ImageRestoration/final_results${FN}
+cd $WORK/ImageRestoration/Microsoft/Bringing-Old-Photos-Back-to-Life
+source $SCRATCH/miniconda3/etc/profile.d/conda.sh
+conda activate microsoft
+python run.py \
+--input_folder ../../SuperSR/results${FN} \
+--output_folder ../results${FN} \
+--GPU 1 \
+--with_scratch \
+--HR
+
+cp $WORK/ImageRestoration/Microsoft/results${FN}/final_output $WORK/ImageRestoration/final_results${FN}
