@@ -88,8 +88,8 @@ def apply_transformations(image, output_dir, prefix):
 def main():
     parser = argparse.ArgumentParser(description='Args for preprocessing', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     
-    parser.add_argument('-n', '--noise', nargs='+', type=float, default=[0, 20, 40], dest='noise', help='Apply noise with specified integer levels')
-    parser.add_argument('-b', '--blur', nargs='+', type=float, default=[0, 20, 40], dest='blur', help='Apply blur with specified levels')
+    parser.add_argument('-n', '--noise', nargs='+', type=int, default=[0, 20, 40], dest='noise', help='Apply noise with specified integer levels')
+    parser.add_argument('-b', '--blur', nargs='+', type=int, default=[0, 20, 40], dest='blur', help='Apply blur with specified levels')
     parser.add_argument('-d', '--downscale', nargs='+', type=float, default=[1.0, 0.5, 0.25], dest='downscale', help='Downscale image by specified factors')
     crop_choices = ['inside_square', 'outside_square', 'no_crop']
     parser.add_argument('-c', '--crop', choices=crop_choices, default='outside_square', dest='crop', help='Crop image with specified option (choices: inside_square, outside_square, no_crop). outside square will make black bars, and inside square will cut off the longer dimension to make the image square shape')

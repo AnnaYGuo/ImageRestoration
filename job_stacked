@@ -19,7 +19,7 @@ python run.py \
 
 cd $WORK/ImageRestoration
 conda activate base
-python test_set/generate_test_imgs.py -r 512 -bw -i Microsoft/results/final_output -o test_set/img_preprocessed
+python test_set/generate_test_imgs.py -r 512 -bw -i test_set/img_in -o test_set/img_preprocessed -n 0 20 -b 0 20
 
 cd $WORK/SuperSR/StableSR
 conda activate stablesr
