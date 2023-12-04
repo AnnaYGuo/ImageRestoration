@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import imageio
 from pathlib import Path
+import argparse
 
 def normalize_sizes(input_dir):
     sizes = []
@@ -35,7 +36,7 @@ def apply_transformations(image, output_dir, prefix):
     bottom = center_y + size // 2
 
     # Crop the image to the square
-    image = image[top:bottom, left:right]
+    image = image[top:bottom, left:right] # do black bars instead
     img_dir = output_dir + f"/{prefix}"
     os.mkdir(img_dir)
     # breakpoint()
@@ -53,6 +54,15 @@ def apply_transformations(image, output_dir, prefix):
                 cv2.imwrite(os.path.join(img_dir, f"{prefix}_blur_{blur_size}_noise_{var}_downscale_{int(scale * 100)}.jpg"), downscaled)
 
 def main(input_dir, output_dir):
+    parser = argparse.ArgumentParser(description='Args for preprocessing')
+    
+    parser.add_argument('--noise', action='store_true', help='Apply noise')
+    parser.add_argument('--blur', action='store_true', help='Apply blur')
+    parser.add_argument('--downscale', action='store_true', help='Downscale image')
+    parser.add_argument('--crop', action='store_true', help='Crop image')
+    
+    
+    
     min_height, min_width = normalize_sizes(input_dir)
 
     for root, _, files in os.walk(input_dir):
