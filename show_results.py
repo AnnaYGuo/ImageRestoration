@@ -124,6 +124,7 @@ def save_images_in_grid(images, grid_size, output_path, top_image=None, row_head
             cv2.putText(combined_image, header, (text_x, text_y), font, font_scale, (255, 255, 255), font_thickness, cv2.LINE_AA)
 
     # Save the combined image
+    combined_image = cv2.imencode('.jpg', combined_image, [int(cv2.IMWRITE_JPEG_QUALITY), 90])[1]
     cv2.imwrite(output_path, combined_image)
 
 col_headers = ["Downscale 0%", "Downscale 25%", "Downscale 50%"]
