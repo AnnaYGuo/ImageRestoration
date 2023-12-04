@@ -31,5 +31,5 @@ python inference_gfpgan.py -i $BASE/SuperSR/results${FN} -o $BASE/GFPGAN/results
 
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
-mkdir $BASE/final_results/final_results${FN}
+mkdir -p $BASE/final_results/final_results${FN}
 cp -r $BASE/GFPGAN/results${FN}/restored_imgs $BASE/final_results/final_results${FN}
