@@ -1,5 +1,5 @@
 test_set/img_preprocessed
 ILO/brewer
-StableSR/results
+SuperSR/results
 */ckpt/
 *.ckpt

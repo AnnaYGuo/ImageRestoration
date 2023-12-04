@@ -4,7 +4,7 @@ set -e
 git submodule update --init --recursive
 conda update conda
 
-cd StableSR/StableSR
+cd SuperSR/StableSR
 echo "Installing StableSR"
 
 if conda env list | grep -q stablesr; 
@@ -19,8 +19,8 @@ pip install -e .
 
 cd ..
 mkdir ckpt/
-wget https://huggingface.co/Iceclear/StableSR/resolve/main/stablesr_000117.ckpt -o ckpt
-wget https://huggingface.co/Iceclear/StableSR/resolve/main/vqgan_cfw_00011.ckpt -o ckpt
+wget https://huggingface.co/Iceclear/StableSR/resolve/main/stablesr_000117.ckpt -P ckpt
+wget https://huggingface.co/Iceclear/StableSR/resolve/main/vqgan_cfw_00011.ckpt -P ckpt
 
 cd ..
 
