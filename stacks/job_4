@@ -30,8 +30,9 @@ python run.py \
 cd $BASE/GFPGAN/GFPGAN
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate gfpgan
-python inference_gfpgan.py -i $BASE/Microsoft/results${FN} -o $BASE/GFPGAN/results${FN} -v 1.3 -s 2
+python inference_gfpgan.py -i $BASE/Microsoft/results${FN}/final_output -o $BASE/GFPGAN/results${FN} -v 1.3 -s 2
 
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
+mkdir $BASE/final_results/final_results${FN}
 cp -r $BASE/GFPGAN/results${FN}/restored_imgs $BASE/final_results/final_results${FN}

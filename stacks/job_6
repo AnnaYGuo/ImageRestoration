@@ -25,7 +25,7 @@ python run.py \
 cd $BASE
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
-python $BASE/test_set/generate_test_imgs.py -r 512 -bw -i $BASE/Microsoft/results${FN} -o $BASE/test_set/img_preprocessed${FN} -n 0 10 20 -b 0 10 20 -d 0.75 0.5
+python $BASE/test_set/generate_test_imgs.py -r 512 -bw -i $BASE/Microsoft/results${FN}/final_output -o $BASE/test_set/img_preprocessed${FN} -n 0 10 20 -b 0 10 20 -d 0.75 0.5
 
 cd $BASE/SuperSR/StableSR
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
@@ -41,4 +41,5 @@ python inference_gfpgan.py -i $BASE/SuperSR/results${FN} -o $BASE/GFPGAN/results
 
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
+mkdir $BASE/final_results/final_results${FN}
 cp -r $BASE/GFPGAN/results${FN}/restored_imgs $BASE/final_results/final_results${FN}

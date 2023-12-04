@@ -41,5 +41,5 @@ python hat/test.py -opt ${BASE}/HAT/HAT-S_SRx4.yml --force_yml datasets:test_1:d
 
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
-
+mkdir $BASE/final_results/final_results${FN}
 cp -r $BASE/HAT/HAT/results/${FN}/visualization/Set5 $BASE/final_results/final_results${FN}

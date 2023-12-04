@@ -34,4 +34,5 @@ python run.py \
 
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
+mkdir $BASE/final_results/final_results${FN}
 cp -r $BASE/Microsoft/results${FN} $BASE/final_results/final_results${FN}
