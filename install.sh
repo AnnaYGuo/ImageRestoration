@@ -14,8 +14,8 @@ else conda env create --yes --file environment.yaml; fi
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate stablesr
 conda install pip
-if ! conda list | grep taming-transformers ; python -m pip install -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers; fi
-if ! conda list | grep taming-transformers ; python -m pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip; fi
+if ! conda list | grep -q taming-transformers ; then python -m pip install -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers; fi
+if ! conda list | grep -q clip ; then python -m pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip; fi
 python -m pip install -e .
 
 cd ..
@@ -65,3 +65,4 @@ cd ../
 python -m pip install -r requirements.txt
 
 cd ../../
+
