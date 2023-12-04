@@ -26,7 +26,7 @@ cd $BASE/Microsoft/Bringing-Old-Photos-Back-to-Life
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate microsoft
 python run.py \
---input_folder $BASE/GFPGAN/results${FN} \
+--input_folder $BASE/GFPGAN/results${FN}/restored_imgs \
 --output_folder $BASE/Microsoft/results${FN} \
 --GPU 1 \
 --with_scratch \
