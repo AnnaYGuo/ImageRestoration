@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git submodule update --init --recursive
+
 if conda info --envs | grep -q stablesr; 
 then echo "stablesr already exists"; 
 else
@@ -11,8 +13,13 @@ else
     pip install -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
     pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip
     pip install -e .
+    
+    cd ..
+    mkdir ckpt/
+    wget https://huggingface.co/Iceclear/StableSR/resolve/main/stablesr_000117.ckpt
+    wget https://huggingface.co/Iceclear/StableSR/resolve/main/vqgan_cfw_00011.ckpt
 
-    cd ../..
+    cd ..
 fi
 
 # Install Microsoft env
