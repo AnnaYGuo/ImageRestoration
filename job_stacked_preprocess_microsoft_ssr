@@ -13,7 +13,7 @@ FN="_pms"
 cd $WORK/ImageRestoration
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
-python test_set/generate_test_imgs.py -r 512 -bw -i test_set/img_in -o test_set/img_preprocessed${FN} -n 0 20 -b 0 20
+python test_set/generate_test_imgs.py -r 512 -bw -i test_set/img_in -o test_set/img_preprocessed${FN} -n 0 20 -b 0 20 -d 0.5 0.75
 
 cd $WORK/ImageRestoration/Microsoft/Bringing-Old-Photos-Back-to-Life
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
