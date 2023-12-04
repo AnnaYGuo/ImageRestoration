@@ -32,4 +32,4 @@ python scripts/sr_val_ddpm_text_T_vqganfin_old.py --config configs/stableSRNew/v
 --init-img $WORK/ImageRestoration/test_set/img_preprocessed${FN}/ \
 --outdir $WORK/ImageRestoration/SuperSR/results${FN}/ --ddpm_steps 200 --dec_w 0.5 --colorfix_type adain
 
-cp $WORK/ImageRestoration/SuperSR/results${FN}/ $WORK/ImageRestoration/final_results${FN}
+cp -r $WORK/ImageRestoration/SuperSR/results${FN}/ $WORK/ImageRestoration/final_results${FN}
