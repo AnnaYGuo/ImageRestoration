@@ -1,3 +1,5 @@
-test_set/img_preprocessed/*
-StableSR/results/*
-!StableSR/results/comparison/*
+test_set/img_preprocessed
+ILO/brewer
+StableSR/results
+*/ckpt/
+*.ckpt
