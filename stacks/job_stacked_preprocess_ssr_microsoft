@@ -13,13 +13,17 @@ FN="_psm"
 cd $WORK/ImageRestoration
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
-python test_set/generate_test_imgs.py -r 512 -bw -i test_set/img_in -o test_set/img_preprocessed${FN} -n 0 20 -b 0 20
+python test_set/generate_test_imgs.py -r 512 -bw -i test_set/img_in -o test_set/img_preprocessed${FN} -n 0 20 -b 0 20 -d 0.5 0.75
 
 cd $WORK/ImageRestoration/SuperSR/StableSR
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate stablesr
 python scripts/sr_val_ddpm_text_T_vqganfin_old.py --config configs/stableSRNew/v2-finetune_text_T_512.yaml --ckpt $SCRATCH/ckpt/stablesr_000117.ckpt --vqgan_ckpt $SCRATCH/ckpt/vqgan_cfw_00011.ckpt \
+<<<<<<< HEAD:job_stacked_preprocess_ssr_microsoft
 --init-img $WORK/ImageRestoration/test_set/img_preprocessed${FN} \
+=======
+--init-img $WORK/ImageRestoration/test_set/img_preprocessed${FN}/ \
+>>>>>>> 2ef2a37fac83c9393e357d2e80289a4f00a2550e:stacks/job_stacked_preprocess_ssr_microsoft
 --outdir $WORK/ImageRestoration/SuperSR/results${FN}/ --ddpm_steps 200 --dec_w 0.5 --colorfix_type adain
 
 cd $WORK/ImageRestoration/Microsoft/Bringing-Old-Photos-Back-to-Life
