@@ -83,7 +83,7 @@ def apply_transformations(image, output_dir, prefix):
             # Downscaling
             for scale in downscale:
                 downscaled = cv2.resize(noisy, (int(noisy.shape[1] * (scale)), int(noisy.shape[0] * (scale))))
-                cv2.imwrite(os.path.join(output_dir, f"{prefix}_blur_{blur_size}_noise_{var}_downscale_{int(scale * 100)}.jpg"), downscaled)
+                cv2.imwrite(os.path.join(output_dir, f"{prefix}_blur_{blur_size}_noise_{var}_downscale_{int(scale * 100)}.png"), downscaled)
 
 def main():
     parser = argparse.ArgumentParser(description='Args for preprocessing', formatter_class=argparse.ArgumentDefaultsHelpFormatter)

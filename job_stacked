@@ -23,4 +23,4 @@ python test_set/generate_test_imgs.py -r 512 -bw -i Microsoft/results/final_outp
 
 cd $WORK/SuperSR/StableSR
 conda activate stablesr
-python scripts/sr_val_ddpm_text_T_vqganfin_old.py --config configs/stableSRNew/v2-finetune_text_T_512.yaml --ckpt $SCRATCH/ckpt/stablesr_000117.ckpt --vqgan_ckpt $SCRATCH/ckpt/vqgan_cfw_00011.ckpt --init-img $WORK/ImageRestoration/test_set/img_preprocessed/ --outdir $WORK/ImageRestoration/StableSR/results/ --ddpm_steps 200 --dec_w 0.5 --colorfix_type adain
+python scripts/sr_val_ddpm_text_T_vqganfin_old.py --config configs/stableSRNew/v2-finetune_text_T_512.yaml --ckpt $SCRATCH/ckpt/stablesr_000117.ckpt --vqgan_ckpt $SCRATCH/ckpt/vqgan_cfw_00011.ckpt --init-img $WORK/ImageRestoration/test_set/img_preprocessed/ --outdir $WORK/ImageRestoration/SuperSR/results/ --ddpm_steps 200 --dec_w 0.5 --colorfix_type adain
