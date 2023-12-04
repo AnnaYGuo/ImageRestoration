@@ -97,7 +97,6 @@ def main():
     parser.add_argument('--output_dir', '-o', default='img_preprocessed', help='Output directory')
     parser.add_argument('-r', '--resolution', default=False, help='Base resolution (Applies if image is cropped to a square using --crop)')
     parser.add_argument('-bw', '--black_white', action='store_true', default = False, help='Processes images in black and white')
-
     
     args = parser.parse_args()
     global blur 

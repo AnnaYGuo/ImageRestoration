@@ -36,4 +36,6 @@ else conda create --name microsoft; fi
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate microsoft
 conda install pip
+conda install -c conda-forge dlib
 python -m pip install -r requirements.txt
+cd ../../
