@@ -5,3 +5,4 @@ ILO/brewer
 *.ckpt
 myjob.e*
 myjob.o*
+final_results/

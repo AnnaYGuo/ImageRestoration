@@ -9,7 +9,7 @@
 #SBATCH -t 01:30:00
 
 # Microsoft, Preprocess, StableSR, GFPGAN
-FN="_job_6"
+FN="_job_6_batch_2"
 BASE="${WORK}/ImageRestoration"
 
 cd $BASE/Microsoft/Bringing-Old-Photos-Back-to-Life
@@ -25,7 +25,7 @@ python run.py \
 cd $BASE
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
-python $BASE/test_set/generate_test_imgs.py -r 512 -bw -i $BASE/Microsoft/results${FN}/final_output -o $BASE/test_set/img_preprocessed${FN} -n 0 10 20 -b 0 10 20 -d 0.75 0.5
+python $BASE/test_set/generate_test_imgs.py -r 512 -bw -i $BASE/Microsoft/results${FN}/final_output -o $BASE/test_set/img_preprocessed${FN} -n 0 10 -b 0 10 -d 0.75
 
 cd $BASE/SuperSR/StableSR
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
