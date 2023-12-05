@@ -8,7 +8,7 @@
 #SBATCH -n 1
 #SBATCH -t 01:30:00
 
-# Preprocess, StableSR, GFPGAN
+# GFPGAN, HAT
 FN="_job_10_batch_3"
 BASE="${WORK}/ImageRestoration"
 
@@ -20,7 +20,7 @@ python inference_gfpgan.py -i $BASE/test_set/img_in -o $BASE/GFPGAN/results${FN}
 cd $BASE/HAT/HAT
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate hat
-python hat/test.py -opt ../HAT-S_SRx4.yml --force_yml datasets:test_1:dataroot_lq=$BASE/SuperSR/results${FN} name=${FN}
+python hat/test.py -opt ../HAT-S_SRx4.yml --force_yml datasets:test_1:dataroot_lq=$BASE/GFPGAN/results${FN} name=${FN}
 
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
