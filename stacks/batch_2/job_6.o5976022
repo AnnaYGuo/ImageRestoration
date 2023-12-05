@@ -1,0 +1,131 @@
+initializing the dataloader
+model weights loaded
+directory of testing image: /work2/09753/ishdeshpa/frontera/ImageRestoration/test_set/img_in/cci_photos_samples
+processing 300 DPI_Oscar Leonard Thompson_Courtesy of Marilyn Poole and the family of Oscar Thompson .jpg
+processing Alexander_Fred_Photo_005.png
+processing Alexander_Fred_Photo_006.png
+processing Alexander_Fred_Photo_008.png
+processing CCI_Taylor_Nina_Jean_Photo_003.png
+processing Carruthers_Jarmon_Jr_1951_Peregrinus_p063(1).jpg
+processing Carruthers_Jarmon_Jr_1951_Peregrinus_p063.png
+processing Delco_Exalton and Wilhelmina.png
+processing Emma Harrison_1953 H-T Yearbook_Low Res pg. 15.png
+processing Horace L. Heath_Website Photo.png
+processing James H. Morton_1953 H-T Yearbook_Low Res.png
+processing Jarmon_Elwin_1952_Peregrinus_p065(1).jpg
+processing Jarmon_Elwin_1952_Peregrinus_p065.png
+processing Lott_Virgil_1951_Peregrinus_p068.jpg
+processing Lott_Virgil_1951_Peregrinus_p068.png
+processing Lott_Virgil_1953_Peregrinus_p029(1).jpg
+processing Lott_Virgil_1953_Peregrinus_p029.png
+processing Sweatt_Heman_1951_Peregrinus_p073(1).jpg
+processing Sweatt_Heman_1951_Peregrinus_p073.png
+processing Walter D. McClennan_1946 Praire View Yearbook_Low Res_pg. 80 (Citation in OIS file).png
+processing Washington_George_Jr_1954_Peregrinus_p055(1).jpg
+processing Washington_George_Jr_1954_Peregrinus_p055.png
+processing brewer.png
+processing dudley.png
+processing lawson.png
+processing perry.png
+Mapping: You are using multi-scale patch attention, conv combine + mask input
+Now you are processing 300 DPI_Oscar Leonard Thompson_Courtesy of Marilyn Poole and the family of Oscar Thompson .png
+Now you are processing Alexander_Fred_Photo_005.png
+Now you are processing Alexander_Fred_Photo_006.png
+Now you are processing Alexander_Fred_Photo_008.png
+Now you are processing CCI_Taylor_Nina_Jean_Photo_003.png
+Skip CCI_Taylor_Nina_Jean_Photo_003.png due to an error:
+CUDA out of memory. Tried to allocate 6.71 GiB. GPU 1 has a total capacty of 15.74 GiB of which 5.93 GiB is free. Including non-PyTorch memory, this process has 9.81 GiB memory in use. Of the allocated memory 7.47 GiB is allocated by PyTorch, and 2.19 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Now you are processing Carruthers_Jarmon_Jr_1951_Peregrinus_p063(1).png
+Now you are processing Carruthers_Jarmon_Jr_1951_Peregrinus_p063.png
+Now you are processing Delco_Exalton and Wilhelmina.png
+Now you are processing Emma Harrison_1953 H-T Yearbook_Low Res pg. 15.png
+Now you are processing Horace L. Heath_Website Photo.png
+Now you are processing James H. Morton_1953 H-T Yearbook_Low Res.png
+Now you are processing Jarmon_Elwin_1952_Peregrinus_p065(1).png
+Now you are processing Jarmon_Elwin_1952_Peregrinus_p065.png
+Now you are processing Lott_Virgil_1951_Peregrinus_p068.png
+Now you are processing Lott_Virgil_1953_Peregrinus_p029(1).png
+Now you are processing Lott_Virgil_1953_Peregrinus_p029.png
+Now you are processing Sweatt_Heman_1951_Peregrinus_p073(1).png
+Now you are processing Sweatt_Heman_1951_Peregrinus_p073.png
+Now you are processing Walter D. McClennan_1946 Praire View Yearbook_Low Res_pg. 80 (Citation in OIS file).png
+Now you are processing Washington_George_Jr_1954_Peregrinus_p055(1).png
+Now you are processing Washington_George_Jr_1954_Peregrinus_p055.png
+Now you are processing brewer.png
+Now you are processing dudley.png
+Now you are processing lawson.png
+Now you are processing perry.png
+1
+1
+Warning: There is no face in Delco_Exalton and Wilhelmina.png
+1
+1
+1
+1
+2
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+The main GPU is 
+1
+dataset [FaceTestDataset] of size 24 was created
+The size of the latent vector size is [16,16]
+Network [SPADEGenerator] was created. Total number of parameters: 92.1 million. To see the architecture, do print(network).
+hi :)
+Running Stage 1: Overall restoration
+Finish Stage 1 ...
+
+
+Running Stage 2: Face Detection
+Finish Stage 2 ...
+
+
+Running Stage 3: Face Enhancement
+Finish Stage 3 ...
+
+
+Running Stage 4: Blending
+Finish Stage 4 ...
+
+
+All the processing is done. Please check the results.
+Noise values: [0, 10]
+Blur values: [0, 10]
+Downscale values: [0.75]
+Crop option: outside_square
+>>>>>>>>>>color correction>>>>>>>>>>>
+Use adain color correction
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Loading model from /scratch1/09753/ishdeshpa/ckpt/vqgan_cfw_00011.ckpt
+Global Step: 18000
+making attention of type 'vanilla' with 512 in_channels
+Working with z of shape (1, 4, 64, 64) = 16384 dimensions.
+making attention of type 'vanilla' with 512 in_channels
+loaded pretrained LPIPS loss from taming/modules/autoencoder/lpips/vgg.pth
+>>>>>>>>>>>>>>>>>missing>>>>>>>>>>>>>>>>>>>
+[]
+>>>>>>>>>>>>>>>>>trainable_list>>>>>>>>>>>>>>>>>>>
+['decoder.fusion_layer_2.encode_enc_1.norm1.weight', 'decoder.fusion_layer_2.encode_enc_1.norm1.bias', 'decoder.fusion_layer_2.encode_enc_1.conv1.weight', 'decoder.fusion_layer_2.encode_enc_1.conv1.bias', 'decoder.fusion_layer_2.encode_enc_1.norm2.weight', 'decoder.fusion_layer_2.encode_enc_1.norm2.bias', 'decoder.fusion_layer_2.encode_enc_1.conv2.weight', 'decoder.fusion_layer_2.encode_enc_1.conv2.bias', 'decoder.fusion_layer_2.encode_enc_1.conv_out.weight', 'decoder.fusion_layer_2.encode_enc_1.conv_out.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb1.conv1.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb1.conv1.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb1.conv2.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb1.conv2.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb1.conv3.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb1.conv3.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb1.conv4.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb1.conv4.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb1.conv5.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb1.conv5.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb2.conv1.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb2.conv1.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb2.conv2.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb2.conv2.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb2.conv3.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb2.conv3.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb2.conv4.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb2.conv4.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb2.conv5.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb2.conv5.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb3.conv1.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb3.conv1.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb3.conv2.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb3.conv2.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb3.conv3.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb3.conv3.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb3.conv4.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb3.conv4.bias', 'decoder.fusion_layer_2.encode_enc_2.0.rdb3.conv5.weight', 'decoder.fusion_layer_2.encode_enc_2.0.rdb3.conv5.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb1.conv1.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb1.conv1.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb1.conv2.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb1.conv2.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb1.conv3.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb1.conv3.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb1.conv4.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb1.conv4.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb1.conv5.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb1.conv5.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb2.conv1.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb2.conv1.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb2.conv2.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb2.conv2.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb2.conv3.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb2.conv3.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb2.conv4.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb2.conv4.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb2.conv5.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb2.conv5.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb3.conv1.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb3.conv1.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb3.conv2.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb3.conv2.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb3.conv3.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb3.conv3.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb3.conv4.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb3.conv4.bias', 'decoder.fusion_layer_2.encode_enc_2.1.rdb3.conv5.weight', 'decoder.fusion_layer_2.encode_enc_2.1.rdb3.conv5.bias', 'decoder.fusion_layer_2.encode_enc_3.norm1.weight', 'decoder.fusion_layer_2.encode_enc_3.norm1.bias', 'decoder.fusion_layer_2.encode_enc_3.conv1.weight', 'decoder.fusion_layer_2.encode_enc_3.conv1.bias', 'decoder.fusion_layer_2.encode_enc_3.norm2.weight', 'decoder.fusion_layer_2.encode_enc_3.norm2.bias', 'decoder.fusion_layer_2.encode_enc_3.conv2.weight', 'decoder.fusion_layer_2.encode_enc_3.conv2.bias', 'decoder.fusion_layer_1.encode_enc_1.norm1.weight', 'decoder.fusion_layer_1.encode_enc_1.norm1.bias', 'decoder.fusion_layer_1.encode_enc_1.conv1.weight', 'decoder.fusion_layer_1.encode_enc_1.conv1.bias', 'decoder.fusion_layer_1.encode_enc_1.norm2.weight', 'decoder.fusion_layer_1.encode_enc_1.norm2.bias', 'decoder.fusion_layer_1.encode_enc_1.conv2.weight', 'decoder.fusion_layer_1.encode_enc_1.conv2.bias', 'decoder.fusion_layer_1.encode_enc_1.conv_out.weight', 'decoder.fusion_layer_1.encode_enc_1.conv_out.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb1.conv1.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb1.conv1.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb1.conv2.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb1.conv2.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb1.conv3.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb1.conv3.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb1.conv4.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb1.conv4.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb1.conv5.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb1.conv5.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb2.conv1.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb2.conv1.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb2.conv2.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb2.conv2.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb2.conv3.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb2.conv3.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb2.conv4.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb2.conv4.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb2.conv5.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb2.conv5.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb3.conv1.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb3.conv1.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb3.conv2.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb3.conv2.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb3.conv3.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb3.conv3.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb3.conv4.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb3.conv4.bias', 'decoder.fusion_layer_1.encode_enc_2.0.rdb3.conv5.weight', 'decoder.fusion_layer_1.encode_enc_2.0.rdb3.conv5.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb1.conv1.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb1.conv1.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb1.conv2.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb1.conv2.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb1.conv3.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb1.conv3.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb1.conv4.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb1.conv4.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb1.conv5.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb1.conv5.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb2.conv1.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb2.conv1.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb2.conv2.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb2.conv2.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb2.conv3.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb2.conv3.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb2.conv4.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb2.conv4.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb2.conv5.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb2.conv5.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb3.conv1.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb3.conv1.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb3.conv2.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb3.conv2.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb3.conv3.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb3.conv3.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb3.conv4.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb3.conv4.bias', 'decoder.fusion_layer_1.encode_enc_2.1.rdb3.conv5.weight', 'decoder.fusion_layer_1.encode_enc_2.1.rdb3.conv5.bias', 'decoder.fusion_layer_1.encode_enc_3.norm1.weight', 'decoder.fusion_layer_1.encode_enc_3.norm1.bias', 'decoder.fusion_layer_1.encode_enc_3.conv1.weight', 'decoder.fusion_layer_1.encode_enc_3.conv1.bias', 'decoder.fusion_layer_1.encode_enc_3.norm2.weight', 'decoder.fusion_layer_1.encode_enc_3.norm2.bias', 'decoder.fusion_layer_1.encode_enc_3.conv2.weight', 'decoder.fusion_layer_1.encode_enc_3.conv2.bias', 'loss.discriminator.main.0.weight', 'loss.discriminator.main.0.bias', 'loss.discriminator.main.2.weight', 'loss.discriminator.main.3.weight', 'loss.discriminator.main.3.bias', 'loss.discriminator.main.5.weight', 'loss.discriminator.main.6.weight', 'loss.discriminator.main.6.bias', 'loss.discriminator.main.8.weight', 'loss.discriminator.main.9.weight', 'loss.discriminator.main.9.bias', 'loss.discriminator.main.11.weight', 'loss.discriminator.main.11.bias']
+>>>>>>>>>>>>>>>>>Untrainable_list>>>>>>>>>>>>>>>>>>>
+['encoder.conv_in.weight', 'encoder.conv_in.bias', 'encoder.down.0.block.0.norm1.weight', 'encoder.down.0.block.0.norm1.bias', 'encoder.down.0.block.0.conv1.weight', 'encoder.down.0.block.0.conv1.bias', 'encoder.down.0.block.0.norm2.weight', 'encoder.down.0.block.0.norm2.bias', 'encoder.down.0.block.0.conv2.weight', 'encoder.down.0.block.0.conv2.bias', 'encoder.down.0.block.1.norm1.weight', 'encoder.down.0.block.1.norm1.bias', 'encoder.down.0.block.1.conv1.weight', 'encoder.down.0.block.1.conv1.bias', 'encoder.down.0.block.1.norm2.weight', 'encoder.down.0.block.1.norm2.bias', 'encoder.down.0.block.1.conv2.weight', 'encoder.down.0.block.1.conv2.bias', 'encoder.down.0.downsample.conv.weight', 'encoder.down.0.downsample.conv.bias', 'encoder.down.1.block.0.norm1.weight', 'encoder.down.1.block.0.norm1.bias', 'encoder.down.1.block.0.conv1.weight', 'encoder.down.1.block.0.conv1.bias', 'encoder.down.1.block.0.norm2.weight', 'encoder.down.1.block.0.norm2.bias', 'encoder.down.1.block.0.conv2.weight', 'encoder.down.1.block.0.conv2.bias', 'encoder.down.1.block.0.nin_shortcut.weight', 'encoder.down.1.block.0.nin_shortcut.bias', 'encoder.down.1.block.1.norm1.weight', 'encoder.down.1.block.1.norm1.bias', 'encoder.down.1.block.1.conv1.weight', 'encoder.down.1.block.1.conv1.bias', 'encoder.down.1.block.1.norm2.weight', 'encoder.down.1.block.1.norm2.bias', 'encoder.down.1.block.1.conv2.weight', 'encoder.down.1.block.1.conv2.bias', 'encoder.down.1.downsample.conv.weight', 'encoder.down.1.downsample.conv.bias', 'encoder.down.2.block.0.norm1.weight', 'encoder.down.2.block.0.norm1.bias', 'encoder.down.2.block.0.conv1.weight', 'encoder.down.2.block.0.conv1.bias', 'encoder.down.2.block.0.norm2.weight', 'encoder.down.2.block.0.norm2.bias', 'encoder.down.2.block.0.conv2.weight', 'encoder.down.2.block.0.conv2.bias', 'encoder.down.2.block.0.nin_shortcut.weight', 'encoder.down.2.block.0.nin_shortcut.bias', 'encoder.down.2.block.1.norm1.weight', 'encoder.down.2.block.1.norm1.bias', 'encoder.down.2.block.1.conv1.weight', 'encoder.down.2.block.1.conv1.bias', 'encoder.down.2.block.1.norm2.weight', 'encoder.down.2.block.1.norm2.bias', 'encoder.down.2.block.1.conv2.weight', 'encoder.down.2.block.1.conv2.bias', 'encoder.down.2.downsample.conv.weight', 'encoder.down.2.downsample.conv.bias', 'encoder.down.3.block.0.norm1.weight', 'encoder.down.3.block.0.norm1.bias', 'encoder.down.3.block.0.conv1.weight', 'encoder.down.3.block.0.conv1.bias', 'encoder.down.3.block.0.norm2.weight', 'encoder.down.3.block.0.norm2.bias', 'encoder.down.3.block.0.conv2.weight', 'encoder.down.3.block.0.conv2.bias', 'encoder.down.3.block.1.norm1.weight', 'encoder.down.3.block.1.norm1.bias', 'encoder.down.3.block.1.conv1.weight', 'encoder.down.3.block.1.conv1.bias', 'encoder.down.3.block.1.norm2.weight', 'encoder.down.3.block.1.norm2.bias', 'encoder.down.3.block.1.conv2.weight', 'encoder.down.3.block.1.conv2.bias', 'encoder.mid.block_1.norm1.weight', 'encoder.mid.block_1.norm1.bias', 'encoder.mid.block_1.conv1.weight', 'encoder.mid.block_1.conv1.bias', 'encoder.mid.block_1.norm2.weight', 'encoder.mid.block_1.norm2.bias', 'encoder.mid.block_1.conv2.weight', 'encoder.mid.block_1.conv2.bias', 'encoder.mid.attn_1.norm.weight', 'encoder.mid.attn_1.norm.bias', 'encoder.mid.attn_1.q.weight', 'encoder.mid.attn_1.q.bias', 'encoder.mid.attn_1.k.weight', 'encoder.mid.attn_1.k.bias', 'encoder.mid.attn_1.v.weight', 'encoder.mid.attn_1.v.bias', 'encoder.mid.attn_1.proj_out.weight', 'encoder.mid.attn_1.proj_out.bias', 'encoder.mid.block_2.norm1.weight', 'encoder.mid.block_2.norm1.bias', 'encoder.mid.block_2.conv1.weight', 'encoder.mid.block_2.conv1.bias', 'encoder.mid.block_2.norm2.weight', 'encoder.mid.block_2.norm2.bias', 'encoder.mid.block_2.conv2.weight', 'encoder.mid.block_2.conv2.bias', 'encoder.norm_out.weight', 'encoder.norm_out.bias', 'encoder.conv_out.weight', 'encoder.conv_out.bias', 'decoder.conv_in.weight', 'decoder.conv_in.bias', 'decoder.mid.block_1.norm1.weight', 'decoder.mid.block_1.norm1.bias', 'decoder.mid.block_1.conv1.weight', 'decoder.mid.block_1.conv1.bias', 'decoder.mid.block_1.norm2.weight', 'decoder.mid.block_1.norm2.bias', 'decoder.mid.block_1.conv2.weight', 'decoder.mid.block_1.conv2.bias', 'decoder.mid.attn_1.norm.weight', 'decoder.mid.attn_1.norm.bias', 'decoder.mid.attn_1.q.weight', 'decoder.mid.attn_1.q.bias', 'decoder.mid.attn_1.k.weight', 'decoder.mid.attn_1.k.bias', 'decoder.mid.attn_1.v.weight', 'decoder.mid.attn_1.v.bias', 'decoder.mid.attn_1.proj_out.weight', 'decoder.mid.attn_1.proj_out.bias', 'decoder.mid.block_2.norm1.weight', 'decoder.mid.block_2.norm1.bias', 'decoder.mid.block_2.conv1.weight', 'decoder.mid.block_2.conv1.bias', 'decoder.mid.block_2.norm2.weight', 'decoder.mid.block_2.norm2.bias', 'decoder.mid.block_2.conv2.weight', 'decoder.mid.block_2.conv2.bias', 'decoder.up.0.block.0.norm1.weight', 'decoder.up.0.block.0.norm1.bias', 'decoder.up.0.block.0.conv1.weight', 'decoder.up.0.block.0.conv1.bias', 'decoder.up.0.block.0.norm2.weight', 'decoder.up.0.block.0.norm2.bias', 'decoder.up.0.block.0.conv2.weight', 'decoder.up.0.block.0.conv2.bias', 'decoder.up.0.block.0.nin_shortcut.weight', 'decoder.up.0.block.0.nin_shortcut.bias', 'decoder.up.0.block.1.norm1.weight', 'decoder.up.0.block.1.norm1.bias', 'decoder.up.0.block.1.conv1.weight', 'decoder.up.0.block.1.conv1.bias', 'decoder.up.0.block.1.norm2.weight', 'decoder.up.0.block.1.norm2.bias', 'decoder.up.0.block.1.conv2.weight', 'decoder.up.0.block.1.conv2.bias', 'decoder.up.0.block.2.norm1.weight', 'decoder.up.0.block.2.norm1.bias', 'decoder.up.0.block.2.conv1.weight', 'decoder.up.0.block.2.conv1.bias', 'decoder.up.0.block.2.norm2.weight', 'decoder.up.0.block.2.norm2.bias', 'decoder.up.0.block.2.conv2.weight', 'decoder.up.0.block.2.conv2.bias', 'decoder.up.1.block.0.norm1.weight', 'decoder.up.1.block.0.norm1.bias', 'decoder.up.1.block.0.conv1.weight', 'decoder.up.1.block.0.conv1.bias', 'decoder.up.1.block.0.norm2.weight', 'decoder.up.1.block.0.norm2.bias', 'decoder.up.1.block.0.conv2.weight', 'decoder.up.1.block.0.conv2.bias', 'decoder.up.1.block.0.nin_shortcut.weight', 'decoder.up.1.block.0.nin_shortcut.bias', 'decoder.up.1.block.1.norm1.weight', 'decoder.up.1.block.1.norm1.bias', 'decoder.up.1.block.1.conv1.weight', 'decoder.up.1.block.1.conv1.bias', 'decoder.up.1.block.1.norm2.weight', 'decoder.up.1.block.1.norm2.bias', 'decoder.up.1.block.1.conv2.weight', 'decoder.up.1.block.1.conv2.bias', 'decoder.up.1.block.2.norm1.weight', 'decoder.up.1.block.2.norm1.bias', 'decoder.up.1.block.2.conv1.weight', 'decoder.up.1.block.2.conv1.bias', 'decoder.up.1.block.2.norm2.weight', 'decoder.up.1.block.2.norm2.bias', 'decoder.up.1.block.2.conv2.weight', 'decoder.up.1.block.2.conv2.bias', 'decoder.up.1.upsample.conv.weight', 'decoder.up.1.upsample.conv.bias', 'decoder.up.2.block.0.norm1.weight', 'decoder.up.2.block.0.norm1.bias', 'decoder.up.2.block.0.conv1.weight', 'decoder.up.2.block.0.conv1.bias', 'decoder.up.2.block.0.norm2.weight', 'decoder.up.2.block.0.norm2.bias', 'decoder.up.2.block.0.conv2.weight', 'decoder.up.2.block.0.conv2.bias', 'decoder.up.2.block.1.norm1.weight', 'decoder.up.2.block.1.norm1.bias', 'decoder.up.2.block.1.conv1.weight', 'decoder.up.2.block.1.conv1.bias', 'decoder.up.2.block.1.norm2.weight', 'decoder.up.2.block.1.norm2.bias', 'decoder.up.2.block.1.conv2.weight', 'decoder.up.2.block.1.conv2.bias', 'decoder.up.2.block.2.norm1.weight', 'decoder.up.2.block.2.norm1.bias', 'decoder.up.2.block.2.conv1.weight', 'decoder.up.2.block.2.conv1.bias', 'decoder.up.2.block.2.norm2.weight', 'decoder.up.2.block.2.norm2.bias', 'decoder.up.2.block.2.conv2.weight', 'decoder.up.2.block.2.conv2.bias', 'decoder.up.2.upsample.conv.weight', 'decoder.up.2.upsample.conv.bias', 'decoder.up.3.block.0.norm1.weight', 'decoder.up.3.block.0.norm1.bias', 'decoder.up.3.block.0.conv1.weight', 'decoder.up.3.block.0.conv1.bias', 'decoder.up.3.block.0.norm2.weight', 'decoder.up.3.block.0.norm2.bias', 'decoder.up.3.block.0.conv2.weight', 'decoder.up.3.block.0.conv2.bias', 'decoder.up.3.block.1.norm1.weight', 'decoder.up.3.block.1.norm1.bias', 'decoder.up.3.block.1.conv1.weight', 'decoder.up.3.block.1.conv1.bias', 'decoder.up.3.block.1.norm2.weight', 'decoder.up.3.block.1.norm2.bias', 'decoder.up.3.block.1.conv2.weight', 'decoder.up.3.block.1.conv2.bias', 'decoder.up.3.block.2.norm1.weight', 'decoder.up.3.block.2.norm1.bias', 'decoder.up.3.block.2.conv1.weight', 'decoder.up.3.block.2.conv1.bias', 'decoder.up.3.block.2.norm2.weight', 'decoder.up.3.block.2.norm2.bias', 'decoder.up.3.block.2.conv2.weight', 'decoder.up.3.block.2.conv2.bias', 'decoder.up.3.upsample.conv.weight', 'decoder.up.3.upsample.conv.bias', 'decoder.norm_out.weight', 'decoder.norm_out.bias', 'decoder.conv_out.weight', 'decoder.conv_out.bias', 'loss.logvar', 'loss.perceptual_loss.net.slice1.0.weight', 'loss.perceptual_loss.net.slice1.0.bias', 'loss.perceptual_loss.net.slice1.2.weight', 'loss.perceptual_loss.net.slice1.2.bias', 'loss.perceptual_loss.net.slice2.5.weight', 'loss.perceptual_loss.net.slice2.5.bias', 'loss.perceptual_loss.net.slice2.7.weight', 'loss.perceptual_loss.net.slice2.7.bias', 'loss.perceptual_loss.net.slice3.10.weight', 'loss.perceptual_loss.net.slice3.10.bias', 'loss.perceptual_loss.net.slice3.12.weight', 'loss.perceptual_loss.net.slice3.12.bias', 'loss.perceptual_loss.net.slice3.14.weight', 'loss.perceptual_loss.net.slice3.14.bias', 'loss.perceptual_loss.net.slice4.17.weight', 'loss.perceptual_loss.net.slice4.17.bias', 'loss.perceptual_loss.net.slice4.19.weight', 'loss.perceptual_loss.net.slice4.19.bias', 'loss.perceptual_loss.net.slice4.21.weight', 'loss.perceptual_loss.net.slice4.21.bias', 'loss.perceptual_loss.net.slice5.24.weight', 'loss.perceptual_loss.net.slice5.24.bias', 'loss.perceptual_loss.net.slice5.26.weight', 'loss.perceptual_loss.net.slice5.26.bias', 'loss.perceptual_loss.net.slice5.28.weight', 'loss.perceptual_loss.net.slice5.28.bias', 'loss.perceptual_loss.lin0.model.1.weight', 'loss.perceptual_loss.lin1.model.1.weight', 'loss.perceptual_loss.lin2.model.1.weight', 'loss.perceptual_loss.lin3.model.1.weight', 'loss.perceptual_loss.lin4.model.1.weight', 'quant_conv.weight', 'quant_conv.bias', 'post_quant_conv.weight', 'post_quant_conv.bias']
+Loading model from /scratch1/09753/ishdeshpa/ckpt/stablesr_000117.ckpt
+Global Step: 16500
+LatentDiffusionSRTextWT: Running in eps-prediction mode
+DiffusionWrapper has 918.93 M params.
+making attention of type 'vanilla' with 512 in_channels
+Working with z of shape (1, 4, 64, 64) = 16384 dimensions.
+making attention of type 'vanilla' with 512 in_channels
+Results are in the [/work2/09753/ishdeshpa/frontera/ImageRestoration/GFPGAN/results_job_6_batch_2] folder.

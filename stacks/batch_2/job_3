@@ -15,7 +15,7 @@ BASE="${WORK}/ImageRestoration"
 cd $BASE
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
-python $BASE/test_set/generate_test_imgs.py -r 512 -bw -i $BASE/test_set/img_in -o $BASE/test_set/img_preprocessed${FN} -n 0 10 -b 0 10 -d 1
+python $BASE/test_set/generate_test_imgs.py -r 512 -bw -i $BASE/test_set/img_in/cci_photos_samples -o $BASE/test_set/img_preprocessed${FN} -n 0 10 -b 0 10 -d 1
 
 cd $BASE/GFPGAN/GFPGAN
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh

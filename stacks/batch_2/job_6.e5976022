@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/Microsoft/Bringing-Old-Photos-Back-to-Life/Face_Detection/align_warp_back_multiple_dlib_HR.py", line 428, in <module>
+    blended = blur_blending_cv2(warped_back, blended, backward_mask)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/Microsoft/Bringing-Old-Photos-Back-to-Life/Face_Detection/align_warp_back_multiple_dlib_HR.py", line 219, in blur_blending_cv2
+    mask *= 255.0
+numpy.core._exceptions._UFuncOutputCastingError: Cannot cast ufunc 'multiply' output from dtype('float64') to dtype('uint8') with casting rule 'same_kind'
+/scratch1/09753/ishdeshpa/miniconda3/envs/stablesr/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and will be removed in 0.15, please use 'weights' instead.
+  warnings.warn(
+/scratch1/09753/ishdeshpa/miniconda3/envs/stablesr/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Global seed set to 42
+Traceback (most recent call last):
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/SuperSR/StableSR/scripts/sr_val_ddpm_text_T_vqganfin_old.py", line 352, in <module>
+    main()
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/SuperSR/StableSR/scripts/sr_val_ddpm_text_T_vqganfin_old.py", line 229, in main
+    model = load_model_from_config(config, f"{opt.ckpt}")
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/SuperSR/StableSR/scripts/sr_val_ddpm_text_T_vqganfin_old.py", line 88, in load_model_from_config
+    model = instantiate_from_config(config.model)
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/SuperSR/StableSR/ldm/util.py", line 85, in instantiate_from_config
+    return get_obj_from_str(config["target"])(**config.get("params", dict()))
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/SuperSR/StableSR/ldm/models/diffusion/ddpm.py", line 1616, in __init__
+    self.instantiate_cond_stage(cond_stage_config)
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/SuperSR/StableSR/ldm/models/diffusion/ddpm.py", line 1729, in instantiate_cond_stage
+    model = instantiate_from_config(config)
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/SuperSR/StableSR/ldm/util.py", line 85, in instantiate_from_config
+    return get_obj_from_str(config["target"])(**config.get("params", dict()))
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/SuperSR/StableSR/ldm/util.py", line 101, in get_obj_from_str
+    return getattr(importlib.import_module(module, package=None), cls)
+  File "/scratch1/09753/ishdeshpa/miniconda3/envs/stablesr/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/SuperSR/StableSR/ldm/modules/encoders/modules.py", line 4, in <module>
+    import clip
+ModuleNotFoundError: No module named 'clip'
+/scratch1/09753/ishdeshpa/miniconda3/envs/gfpgan/lib/python3.11/site-packages/torchvision/transforms/functional_tensor.py:5: UserWarning: The torchvision.transforms.functional_tensor module is deprecated in 0.15 and will be **removed in 0.17**. Please don't rely on it. You probably just need to use APIs in torchvision.transforms.functional or in torchvision.transforms.v2.functional.
+  warnings.warn(
+/scratch1/09753/ishdeshpa/miniconda3/envs/gfpgan/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/scratch1/09753/ishdeshpa/miniconda3/envs/gfpgan/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+cp: cannot stat ‘/work2/09753/ishdeshpa/frontera/ImageRestoration/GFPGAN/results_job_6_batch_2/restored_imgs’: No such file or directory

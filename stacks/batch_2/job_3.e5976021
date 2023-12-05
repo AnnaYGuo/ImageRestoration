@@ -1,0 +1,13 @@
+/scratch1/09753/ishdeshpa/miniconda3/envs/gfpgan/lib/python3.11/site-packages/torchvision/transforms/functional_tensor.py:5: UserWarning: The torchvision.transforms.functional_tensor module is deprecated in 0.15 and will be **removed in 0.17**. Please don't rely on it. You probably just need to use APIs in torchvision.transforms.functional or in torchvision.transforms.v2.functional.
+  warnings.warn(
+/scratch1/09753/ishdeshpa/miniconda3/envs/gfpgan/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/scratch1/09753/ishdeshpa/miniconda3/envs/gfpgan/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/Microsoft/Bringing-Old-Photos-Back-to-Life/Face_Detection/align_warp_back_multiple_dlib_HR.py", line 428, in <module>
+    blended = blur_blending_cv2(warped_back, blended, backward_mask)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work2/09753/ishdeshpa/frontera/ImageRestoration/Microsoft/Bringing-Old-Photos-Back-to-Life/Face_Detection/align_warp_back_multiple_dlib_HR.py", line 219, in blur_blending_cv2
+    mask *= 255.0
+numpy.core._exceptions._UFuncOutputCastingError: Cannot cast ufunc 'multiply' output from dtype('float64') to dtype('uint8') with casting rule 'same_kind'
