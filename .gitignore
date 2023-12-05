@@ -6,3 +6,5 @@ ILO/brewer
 myjob.e*
 myjob.o*
 final_results/
+job_*.o*
+job_*.e*

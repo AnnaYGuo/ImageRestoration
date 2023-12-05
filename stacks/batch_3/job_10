@@ -15,7 +15,7 @@ BASE="${WORK}/ImageRestoration"
 cd $BASE/GFPGAN/GFPGAN
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate gfpgan
-python inference_gfpgan.py -i $BASE/test_set/img_in -o $BASE/GFPGAN/results${FN} -v 1.3 -s 2
+python inference_gfpgan.py -i $BASE/test_set/img_in/nonportraits -o $BASE/GFPGAN/results${FN} -v 1.3 -s 2
 
 cd $BASE/HAT/HAT
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
@@ -25,4 +25,4 @@ python hat/test.py -opt ../HAT-S_SRx4.yml --force_yml datasets:test_1:dataroot_l
 source $SCRATCH/miniconda3/etc/profile.d/conda.sh
 conda activate base
 mkdir -p $BASE/final_results/final_results${FN}
-cp -r $BASE/HAT/HAT/results/${FN}/visualization/Set5 $BASE/final_results/final_results${FN}
+cp -r $BASE/HAT/HAT/results/${FN}/visualization/Set5 $BASE/final_results/batch_3/final_results${FN}
