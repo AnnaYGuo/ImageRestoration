@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#SBATCH -p rtx-dev
+#SBATCH -o myjob.o%j
+#SBATCH -e myjob.e%j
+#SBATCH -J stablesr
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 01:30:00
+
+cd $SCRATCH/ImageRestoration/SuperSR/StableSR
+conda init
+source ~/.bashrc
+conda activate stablesr
+python scripts/sr_val_ddpm_text_T_vqganfin_old.py --config configs/stableSRNew/v2-finetune_text_T_512.yaml --ckpt $SCRATCH/stablesr_000117.ckpt --vqgan_ckpt $SCRATCH/vqgan_cfw_00011.ckpt --init-img $SCRATCH/ImageRestoration/test_set/img_preprocessed/ --outdir $SCRATCH/ImageRestoration/StableSR/results/ --ddpm_steps 200 --dec_w 0.5 --colorfix_type adain

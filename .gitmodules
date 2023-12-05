@@ -1,0 +1,12 @@
+[submodule "SuperSR/StableSR"]
+	path = SuperSR/StableSR
+	url = git@github.com:IceClear/StableSR.git
+[submodule "Microsoft/Bringing-Old-Photos-Back-to-Life"]
+	path = Microsoft/Bringing-Old-Photos-Back-to-Life
+	url = git@github.com:microsoft/Bringing-Old-Photos-Back-to-Life.git
+[submodule "GFPGAN/GFPGAN"]
+	path = GFPGAN/GFPGAN
+	url = git@github.com:TencentARC/GFPGAN.git
+[submodule "HAT/HAT"]
+	path = HAT/HAT
+	url = git@github.com:XPixelGroup/HAT.git
